@@ -187,12 +187,12 @@ export default function PageLista() {
                     </div>
                     <div className={styles.bloco}>
                         <p><span className="ativo">RECEBIDOS</span></p>
-                        {loading ? <p>Carregando...</p> :  <h1 className={styles.money}>{formatMoneySemSifra(recebidos)}</h1>}
+                        {loading ? <p>Carregando...</p> :  <h1 className={styles.money}>{recebidos ? formatMoneySemSifra(recebidos) : "0" }</h1>}
                         <p>{filtro}</p>
                     </div>
                     <div className={styles.bloco}>
                         <p><span className="pendente">PENDENTE</span></p>
-                        {loading ? <p>Carregando...</p> :  <h1 className={styles.money}>{formatMoneySemSifra(pendente)}</h1>}
+                        {loading ? <p>Carregando...</p> :  <h1 className={styles.money}>{pendente ? formatMoneySemSifra(pendente): "0"}</h1>}
                         <p>{filtro}</p>
                     </div>
                 </div>
