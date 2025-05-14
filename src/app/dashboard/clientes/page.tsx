@@ -138,6 +138,19 @@ export default function PageLista() {
         };
     }, []);
 
+    const pageNumbers = [];
+    const maxPagesToShow = 5;
+
+    // Cálculo das páginas ao redor da página atual
+    const startPage = Math.max(1, currentPage - Math.floor(maxPagesToShow / 2));
+    const endPage = Math.min(lastPage, startPage + maxPagesToShow - 1);
+
+    // Corrige o início quando está no final
+    const adjustedStartPage = Math.max(1, Math.min(startPage, lastPage - maxPagesToShow + 1));
+
+    for (let i = adjustedStartPage; i <= endPage; i++) {
+        pageNumbers.push(i);
+    }
 
     return (
         <>
@@ -252,19 +265,37 @@ export default function PageLista() {
                     <div className={styles.pagination}>
                         <button
                             onClick={() => setCurrentPage((p) => Math.max(p - 1, 1))}
-                            disabled={currentPage === 1}>
+                            disabled={currentPage === 1}
+                        >
                             Anterior
                         </button>
 
-                        {Array.from({length: lastPage}, (_, i) => (
+                        {/* Reticências no início */}
+                        {adjustedStartPage > 1 && (
+                            <>
+                                <button onClick={() => setCurrentPage(1)}>1</button>
+                                {adjustedStartPage > 2 && <span className={styles.dots}>...</span>}
+                            </>
+                        )}
+
+                        {/* Páginas Dinâmicas */}
+                        {pageNumbers.map((number) => (
                             <button
-                                key={i}
-                                className={currentPage === i + 1 ? styles.activePage : ''}
-                                onClick={() => setCurrentPage(i + 1)}
+                                key={number}
+                                className={currentPage === number ? styles.activePage : ''}
+                                onClick={() => setCurrentPage(number)}
                             >
-                                {i + 1}
+                                {number}
                             </button>
                         ))}
+
+                        {/* Reticências no final */}
+                        {endPage < lastPage && (
+                            <>
+                                {endPage < lastPage - 1 && <span className={styles.dots}>...</span>}
+                                <button onClick={() => setCurrentPage(lastPage)}>{lastPage}</button>
+                            </>
+                        )}
 
                         <button
                             onClick={() => setCurrentPage((p) => Math.min(p + 1, lastPage))}
