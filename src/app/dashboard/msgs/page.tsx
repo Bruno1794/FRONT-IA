@@ -7,7 +7,6 @@ import Swal from "sweetalert2";
 import deleteNotice from "@/action/notices/delete-notices";
 import ModalModern from "@/components/modal/modal-modern";
 import postNotices from "@/action/notices/post-notices";
-import {redirect} from "next/navigation";
 import putNotices from "@/action/notices/put-notices";
 import showNotices from "@/action/notices/show-notices";
 

@@ -4,7 +4,6 @@ import React from "react";
 import {getSettings} from "@/action/settings/get-settings";
 import postSettings from "@/action/settings/post-settings";
 import Swal from "sweetalert2";
-import {redirect} from "next/navigation";
 
 export default function ConfigPage() {
     const [time, setTime] = React.useState("");

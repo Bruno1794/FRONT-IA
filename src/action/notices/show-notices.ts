@@ -1,5 +1,5 @@
 'use server'
-import {GET_NOTICIES, SHOW_NOTICIES} from "@/functions/Api";
+import {SHOW_NOTICIES} from "@/functions/Api";
 import {cookies} from "next/headers";
 
 
