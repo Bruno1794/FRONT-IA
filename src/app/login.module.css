@@ -1,0 +1,75 @@
+.sectionLogin {
+    display: block;
+    align-content: center;
+    height: 100vh;
+    background: #F9F9F9;
+
+}
+
+.login {
+    display: block;
+    width: 500px;
+    height: 500px;
+    justify-self: center;
+    justify-content: center;
+    place-content: center;
+    padding: 20px;
+    background: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0 4px 4px -2px #20232a;
+
+
+}
+
+.login h1 {
+    display: block;
+    text-align: center;
+    font-size: 3rem;
+    background: #20232a;
+    justify-self: center;
+    margin-bottom: 40px;
+    color: #F9F9F9;
+    border-radius: 3px;
+    padding: 5px;
+
+
+}
+
+.login input {
+    display: block;
+    padding: 10px;
+    border-radius: 7px;
+    margin: 18px 0;
+    height: 30px;
+    font-size: 1.267rem;
+    width: 90%;
+    justify-self: center;
+    color: #20232A;
+    border: none;
+    background: #F9F9F9;
+
+}
+
+.login input:focus {
+    outline: 1px solid #20232A;
+}
+
+.login input:hover {
+}
+
+@media (max-width: 590px) {
+
+    .login {
+        width: 80%;
+        height: 500px;
+    }
+
+    .login h1 {
+        font-size: 2.4rem;
+    }
+
+    .login a {
+        font-size: 1rem;
+        padding: 8px 50px;
+    }
+}

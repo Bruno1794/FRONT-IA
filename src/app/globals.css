@@ -1,0 +1,451 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+h1, h2, h3, h4, h5, h6, p, blockquote {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+ul, li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+
+}
+
+.conteiner {
+    display: block;
+    border: #c1c1c1 solid 1px;
+    padding: 18px;
+    border-radius: 5px;
+    min-height: auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.btnPadrao {
+    display: block;
+    padding: 14px 60px;
+    border-radius: 7px;
+    margin: 18px 15px;
+    background: #20232a;
+    color: white;
+    justify-self: start;
+    box-sizing: border-box;
+    border: none;
+    outline: 1px solid #c1c1c1;
+    cursor: pointer;
+}
+
+.btnPadrao:focus {
+    border: 1px solid #989898;
+
+}
+
+.btnPadrao:hover {
+    background: black;
+
+}
+
+@media (max-width: 720px) {
+    .btnPadrao {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+}
+
+.acoesTable {
+    display: block;
+    margin: 10px 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 7px;
+    border: #c1c1c1 solid 1px;
+}
+
+.acoes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.opcoesAcoes {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.active {
+    background: #91C7DB !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    color: white;
+
+}
+
+.btnAcoes {
+    display: block;
+    margin: 18px 12px 18px 0;
+    padding: 22px 30px;
+    border-radius: 5px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid #20232A;
+
+}
+
+@media (max-width: 720px) {
+    .opcoesAcoes {
+        padding: 10px;
+        margin: 10px 20px;
+
+
+    }
+
+    .btnAcoes {
+        padding: 20px 25px;
+        margin: 3px;
+    }
+
+}
+
+.whatsapp {
+    background: #20232A;
+    position: relative;
+}
+
+.whatsapp:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: url('/img/zap.png') center center no-repeat;
+}
+
+.btnAcoes.whatsapp:hover::after {
+    content: 'Whatsapp';
+    position: absolute;
+    bottom: 100%; /* Acima do ícone */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 4px;
+    white-space: nowrap;
+    font-size: 12px;
+    transition: opacity 0.2s;
+    opacity: 1;
+    margin: 1.6px 0;
+}
+
+.btnAcoes.whatsapp:hover::after {
+    opacity: 1;
+}
+
+.editar {
+    background: #20232A;
+    position: relative;
+}
+
+.editar:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: url('/img/editar.png') center center no-repeat;
+}
+
+.btnAcoes.editar:hover::after {
+    content: 'Editar';
+    position: absolute;
+    bottom: 100%; /* Acima do ícone */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 4px;
+    white-space: nowrap;
+    font-size: 12px;
+    transition: opacity 0.2s;
+    opacity: 1;
+    margin: 1.6px 0;
+}
+
+.btnAcoes.editar:hover::after {
+    opacity: 1;
+}
+
+.restricao {
+    background: #20232A;
+    position: relative;
+}
+
+.restricao:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: url('/img/restricao.png') center center no-repeat;
+}
+
+.btnAcoes.restricao:hover::after {
+    content: 'Bloquear';
+    position: absolute;
+    bottom: 100%; /* Acima do ícone */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 4px;
+    white-space: nowrap;
+    font-size: 12px;
+    transition: opacity 0.2s;
+    opacity: 1;
+    margin: 1.6px 0;
+}
+
+.btnAcoes.restricao:hover::after {
+    opacity: 1;
+}
+
+
+.renovar {
+    background: #20232A;
+    position: relative;
+}
+
+.renovar:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: url('/img/renovar.png') center center no-repeat;
+}
+
+.btnAcoes.renovar:hover::after {
+    content: 'Renovar';
+    position: absolute;
+    bottom: 100%; /* Acima do ícone */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 4px;
+    white-space: nowrap;
+    font-size: 12px;
+    transition: opacity 0.2s;
+    opacity: 1;
+    margin: 1.6px 0;
+}
+
+.btnAcoes.renovar:hover::after {
+    opacity: 1;
+}
+
+
+.financeiro {
+    background: #20232A;
+    position: relative;
+}
+
+.financeiro:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: url('/img/dolar.png') center center no-repeat;
+}
+
+.btnAcoes.financeiro:hover::after {
+    content: 'Historico';
+    position: absolute;
+    bottom: 100%; /* Acima do ícone */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 4px;
+    white-space: nowrap;
+    font-size: 12px;
+    transition: opacity 0.2s;
+    opacity: 1;
+    margin: 1.6px 0;
+}
+
+.btnAcoes.financeiro:hover::after {
+    opacity: 1;
+}
+
+
+.atualiza {
+    background: #20232A;
+    position: relative;
+}
+
+.atualiza:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: url('/img/atauliza.png') center center no-repeat;
+}
+
+.btnAcoes.atualiza:hover::after {
+    content: 'Atualizar';
+    position: absolute;
+    bottom: 100%; /* Acima do ícone */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 4px;
+    white-space: nowrap;
+    font-size: 12px;
+    transition: opacity 0.2s;
+    opacity: 1;
+    margin: 1.6px 0;
+}
+
+.btnAcoes.atualiza:hover::after {
+    opacity: 1;
+}
+
+.quitar {
+    background: #20232A;
+    position: relative;
+}
+
+.quitar:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: url('/img/quitar.png') center center no-repeat;
+}
+
+.btnAcoes.quitar:hover::after {
+    content: 'Quitar';
+    position: absolute;
+    bottom: 100%; /* Acima do ícone */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 4px;
+    white-space: nowrap;
+    font-size: 12px;
+    transition: opacity 0.2s;
+    opacity: 1;
+    margin: 1.6px 0;
+}
+
+.btnAcoes.quitar:hover::after {
+    opacity: 1;
+}
+
+.lixo {
+    background: #20232A;
+    position: relative;
+}
+
+.lixo:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: url('/img/lixo.png') center center no-repeat;
+}
+
+.btnAcoes.lixo:hover::after {
+    content: 'Excluir';
+    position: absolute;
+    bottom: 100%; /* Acima do ícone */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 4px;
+    white-space: nowrap;
+    font-size: 12px;
+    transition: opacity 0.2s;
+    opacity: 1;
+    margin: 1.6px 0;
+}
+
+.btnAcoes.lixo:hover::after {
+    opacity: 1;
+}
+
+
+
+
+.ativo{
+    background: darkgreen;
+    padding: 2px 10px;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.pendente{
+    background: darkorange;
+    padding: 2px 10px;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+.inativo{
+    background: darkred;
+    padding: 2px 10px;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.cancelado{
+    background: red;
+    padding: 2px 10px;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 12px;
+    text-transform: uppercase;
+}
