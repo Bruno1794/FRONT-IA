@@ -15,6 +15,7 @@ import deleteClient from "@/action/client/delete-client";
 import geContClient from "@/action/client/get-cont-client";
 import getDadosPagamentos from "@/action/pagamento/get-dados-pagamentos";
 import {formatMoneySemSifra} from "@/functions/format-money-sem-sifra";
+import Link from "next/link";
 
 
 export default function PageLista() {
@@ -152,6 +153,7 @@ export default function PageLista() {
                             onChange={(e) => setFiltro(e.target.value)}
                             required>
                             <option value="" disabled hidden>Filtro</option>
+                            <option value="Ontem">Ontem</option>
                             <option value="hoje">Hoje</option>
                             <option value="Semanal">Semanal</option>
                             <option value="Mensal">Mensal</option>
@@ -227,6 +229,12 @@ export default function PageLista() {
                                         <Image src="/img/lixo-mini.png" alt="" width={24} height={24}
                                                className={styles.btnEditar}
                                                onClick={() => handleDeletar(item.id)}/>
+
+                                        <Link href={`https://wa.me/${item.phone}`} target="_blank" rel="noopener noreferrer">
+                                            <Image src="/img/zap-min.png" alt="" width={24} height={24}
+                                                   className={styles.btnEditar}/>
+                                        </Link>
+
 
                                     </div>
 

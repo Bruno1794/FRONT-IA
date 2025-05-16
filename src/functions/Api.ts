@@ -1,5 +1,5 @@
-//export const API_URL = "http://localhost:8000/api";
-export const API_URL = "https://api.codeacode.com.br/api";
+export const API_URL = "http://localhost:8000/api";
+//export const API_URL = "https://api.codeacode.com.br/api";
 
 export function POST_LOGIN() {
     return {
