@@ -1,5 +1,5 @@
-//export const API_URL = "http://localhost:8000/api";
-export const API_URL = "https://api.codeacode.com.br/api";
+export const API_URL = "http://localhost:8000/api";
+//export const API_URL = "https://api.codeacode.com.br/api";
 
 export function POST_LOGIN() {
     return {
@@ -137,6 +137,15 @@ export function PUT_STATUS(value: number) {
     };
 
 }
+
+export function GET_PAGAMENTO(value?: string, pesquisa?: string, page?: number) {
+    return {
+        url: API_URL + `/pagamentos?filtro=${value}&pesquisa=${pesquisa}&page=${page}`,
+
+    };
+
+}
+
 
 export function UPDATE_PAGAMENTO(value: number) {
     return {
