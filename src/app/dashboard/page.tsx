@@ -36,6 +36,7 @@ export default function PageLista() {
     const[recebidos, setRecebidos] = React.useState("");
     const[pendente, setPendente] = React.useState("");
     const [loading, setLoading] = React.useState(false);
+    const [atualiza, setAtualiza] = React.useState(false);
 
     const [state, action] = React.useActionState(ativaClient, {
         ok: false,
@@ -87,7 +88,7 @@ export default function PageLista() {
         }
 
         clientes();
-    }, [state, lista])
+    }, [state, lista, atualiza])
 
     React.useEffect(() => {
         setLoading(true);
@@ -116,7 +117,7 @@ export default function PageLista() {
     }, [filtro])
 
     function handleDeletar(id: string) {
-
+        setAtualiza(false)
 
         Swal.fire({
             title: "Deseja excluir esse cliente?",
@@ -134,6 +135,7 @@ export default function PageLista() {
                     icon: "success"
                 }).then(() => deleteClient(Number(id))).then(() => {
                     setAtLista(true)
+                    setAtualiza(true)
 
                 });
 
